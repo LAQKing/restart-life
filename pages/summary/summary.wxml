@@ -1,0 +1,52 @@
+<view class="container">
+    <view class="title1 wux-text--center">人生总结</view>
+    <view class="flex">
+        <view>
+            <view class="userinfo-avatar">
+                <image class=" round avatar" src="{{userImg}}"></image>
+            </view>
+        </view>
+        <view class="userinfo-nickname">
+            {{userTxt}} 的重生
+        </view>
+    </view>
+
+    <view class="list">
+        <view class="li">
+            <view class="lifeProperty grade{{summaryCHR.grade}}b">颜值：{{summaryCHR.value}} {{summaryCHR.judge}}
+            </view>
+        </view>
+        <view class="li">
+            <view class="lifeProperty grade{{summaryINT.grade}}b">智力：{{summaryINT.value}} {{summaryINT.judge}}
+            </view>
+        </view>
+        <view class="li">
+            <view class="lifeProperty grade{{summarySTR.grade}}b">体质：{{summarySTR.value}} {{summarySTR.judge}}
+            </view>
+        </view>
+        <view class="li">
+            <view class="lifeProperty grade{{summaryMNY.grade}}b">家境：{{summaryMNY.value}} {{summaryMNY.judge}}
+            </view>
+        </view>
+        <view class="li">
+            <view class="lifeProperty grade{{summarySPR.grade}}b">快乐：{{summarySPR.value}} {{summarySPR.judge}}
+            </view>
+        </view>
+        <view class="li">
+            <view class="lifeProperty grade{{summaryAGE.grade}}b">享年：{{summaryAGE.value}} {{summaryAGE.judge}}
+            </view>
+        </view>
+        <view class="li">
+            <view class="lifeProperty grade{{summaryFinal.grade}}b">总评：{{summaryFinal.value}} {{summaryFinal.judge}}
+            </view>
+        </view>
+    </view>
+
+    <view class="qcode-view">
+        <!-- <image class="qcode" src="../../../images/log.png" /> -->
+    </view>
+
+    <view class="again" bindtap="again">
+        再来一次
+    </view>
+</view>

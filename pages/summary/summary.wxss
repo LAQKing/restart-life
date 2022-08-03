@@ -1,0 +1,104 @@
+page{
+    padding: 0;
+}
+.container {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #222831;
+  min-height: 100vh;
+  padding: 50rpx 30rpx;
+}
+
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.title1 {
+  font-size: 70rpx;
+  color: white;
+  text-align: center;
+}
+
+.title2 {
+  font-size: 42rpx;
+  color: white;
+  background-size: cover;
+}
+
+.main {
+  border-style: solid;
+  border: 1px #ccc solid;
+  border-width: 2px 2px;
+  border-radius: 0.2rem;
+  margin-top: 10px;
+  color: #fff;
+}
+.list{
+    margin: 50rpx 0;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+.list .li{
+   border-bottom: 1rpx solid #f5f5f5;
+}
+.lifeProperty{
+  position: relative;
+  font-size: 36rpx;
+  text-align: center;
+  color: white;
+  padding: 15rpx 0;
+}
+
+.grade0b {
+	background-color: #464646;
+}
+.grade1b {
+	background-color: #6495ed;
+}
+.grade2b {
+	background-color: #5abdf7;
+}
+.grade3b {
+	background-color: #ffa07a;
+}
+.qcode-view {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qcode {
+  width: 300rpx;
+  height: 300rpx;
+
+  border-radius: 50%;
+}
+.userinfo-avatar {
+  width: 160rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userinfo-nickname {
+  font-size: 42rpx;
+  color: white;
+  margin-left: 30rpx;
+}
+
+.again{
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    background-color: #119ae9;
+    color: white;
+    font-size: 36rpx;
+    border-radius: 15rpx;
+    padding: 20rpx 0;
+}

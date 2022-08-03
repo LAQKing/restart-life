@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/property/property",
+    "pages/summary/summary",
+    "pages/talents/talents",
+    "pages/trajectory/trajectory"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

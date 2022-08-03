@@ -1,0 +1,54 @@
+<!--miniprogram/pages/liferestart/property.wxml-->
+<wux-toptips id="wux-toptips" />
+
+<view class="container ytable">
+  <view class="ytable-cell">
+  <view class="title1 text-center">调整初始属性</view>
+  <view class="title2 text-center">可用属性点：{{propertyResidue}}</view>
+  
+  <view class="list">
+    <view class="li">
+       <text class="txt">颜值</text>
+       <view class="number" bindtap="onChange" data-value="{{ propertyCHR }}">
+         <view class="edit {{propertyCHR>0?'':'on'}}" bindtap="editJian" id="propertyCHR">-</view>
+         <view class="edit inner">{{ propertyCHR }}</view>
+         <view class="edit {{propertyResidue==0?'on':''}}" bindtap="editAdd" id="propertyCHR">+</view>
+       </view>
+    </view>
+    <view class="li">
+       <text class="txt">智力</text>
+       <view class="number" bindtap="onChange" data-value="{{ propertyINT }}">
+         <view class="edit {{propertyINT>0?'':'on'}}" bindtap="editJian" id="propertyINT">-</view>
+         <view class="edit inner">{{ propertyINT }}</view>
+         <view class="edit {{propertyResidue==0?'on':''}}" bindtap="editAdd" id="propertyINT">+</view>
+       </view>
+    </view>
+    <view class="li">
+       <text class="txt">体质</text>
+       <view class="number" bindtap="onChange" data-value="{{ propertySTR }}">
+         <view class="edit {{propertySTR>0?'':'on'}}" bindtap="editJian" id="propertySTR">-</view>
+         <view class="edit inner">{{ propertySTR }}</view>
+         <view class="edit {{propertyResidue==0?'on':''}}" bindtap="editAdd" id="propertySTR">+</view>
+       </view>
+    </view>
+    <view class="li">
+       <text class="txt">家境</text>
+       <view class="number" bindtap="onChange" data-value="{{ propertyMNY }}">
+         <view class="edit {{propertyMNY>0?'':'on'}}" bindtap="editJian" id="propertyMNY">-</view>
+         <view class="edit inner">{{ propertyMNY }}</view>
+         <view class="edit {{propertyResidue==0?'on':''}}" bindtap="editAdd" id="propertyMNY">+</view>
+       </view>
+    </view>
+    
+  </view>
+  <wux-white-space size="large" />
+  <view class="title2 wux-text--center">已选天赋</view>
+  <view class="talentsTable">
+  <block wx:for="{{selectedTalents}}" wx:key="this">
+    <view class="grade{{item.grade}}b itemli">{{item.name}} ({{item.description}})</view>
+  </block>
+  </view>
+  <button class="btnB" bindtap="randomProperty">随机分配</button>
+  <button class="btnB btnG" bindtap="bron">开启新人生</button>
+</view>
+</view>

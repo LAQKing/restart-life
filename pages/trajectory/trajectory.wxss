@@ -1,0 +1,99 @@
+page{
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+.container {
+  background-color: #222831;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 50rpx 30rpx;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rpx;
+  height: 80rpx;
+}
+.list .li{
+    font-size: 36rpx;
+}
+.list .li3{
+    width: 33.333%;
+}
+.list .li2{
+    width: 50%;
+}
+.title1 {
+  font-size: 82rpx;
+  color: white;
+  background-size: cover;
+}
+
+.title2 {
+  font-size: 42rpx;
+  color: white;
+  background-size: cover;
+}
+
+.lifeProperty{
+  position: relative;
+  border: 1rpx #ccc solid;
+  margin: 5rpx;
+  padding: 10rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  color: white;
+}
+
+
+.main {
+  border-style: solid;
+  border: 1px #ccc solid;
+  border-width: 2px 2px;
+  border-radius: 0.2rem;
+  margin-top: 20rpx;
+  color: #fff;
+  width: 90%;
+  height: calc(100vh - 280rpx);
+}
+
+.item {
+  font-size: 36rpx;
+  box-sizing: border-box;
+  display: flex;
+  padding: 15rpx;
+  border-bottom: 1rpx dashed #cecece;
+  color: white;
+}
+.age{
+    width: 120rpx;
+}
+.ageTxt{
+    width: calc(100% - 120rpx);
+}
+.index {
+  flex: 1;
+  color: #fff;
+}
+
+.desc {
+  flex: 4;
+  color: #fff;
+}
+
+.zjBtn{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 30rpx;
+    background-color: #2292ee;
+    color: white;
+    text-align: center;
+    font-size: 36rpx;
+    padding: 20rpx;
+    border-radius: 15rpx;
+}

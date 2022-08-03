@@ -1,0 +1,35 @@
+<!--miniprogram/pages/liferestart/talents.wxml-->
+<view class="container ytable">
+    <view class="ytable-cell">
+        <view class="ckBox" wx:if="{{showSelectTalents}}">
+            <view class="title1 wux-text--center">配置天赋</view>
+           <view class="tiptxt">请选择3个</view>
+        <view class="scrollBox">
+            <scroll-view class="scroll" scroll-y="true">
+                <checkbox-group bindchange="onSelectTalents">
+                   <label wx:for="{{talentsArray}}" wx:key="this">
+                    <view class="liBox" bindtap="changeIcon" id="{{index}}">
+                        <icon type="{{item.checkType?'success':'circle'}}" size="23" class="iconsuccess" ></icon>
+                        <checkbox class="check" value="{{index}},{{item._id}}" disabled="{{item.disabled?true:false}}" />
+                        {{item.name}} ({{item.description}})
+                    </view>
+                </label>
+                </checkbox-group>
+            </scroll-view>
+            <button  bindtap="toProperty" class="btnBox">确认</button>
+        </view>
+        </view>
+        <view class="ckBox" wx:if="{{!showSelectTalents}}">
+            <view class="title1 wux-text--center">选择人生</view>
+            <view class="btn-view">
+                <view bindtap="randomLife" class="btn">
+                    <view class="btn-text">听天由命</view>
+                </view>
+
+                <view bindtap="showTalents" class="btn">
+                    <view class="btn-text">我命由我</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

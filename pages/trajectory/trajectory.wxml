@@ -1,0 +1,56 @@
+<!--miniprogram/pages/liferestart/talents.wxml-->
+<view class="container">
+
+    <view class="list">
+        <view class="li li3">
+            <view class="lifeProperty">颜值：{{propertyCHR}}</view>
+        </view>
+        <view class="li li3">
+            <view class="lifeProperty">智力：{{propertyINT}}</view>
+        </view>
+        <view class="li li3">
+            <view class="lifeProperty">体质：{{propertySTR}}</view>
+        </view>
+    </view>
+    <view class="list">
+        <view class="li li2">
+            <view class="lifeProperty">家境：{{propertyMNY}}</view>
+        </view>
+        <view class="li li2">
+            <view class="lifeProperty">快乐：{{propertyMNY}}</view>
+        </view>
+    </view>
+    <view class="main" bindtap="nextAge">
+        <view size="large">
+            <scroll-view
+                style="height:{{pageHeight}}px;width: 100%;display: flex;flex-direction: column;margin: 30rpx 0;"
+                scroll-y="true" scroll-top="{{scrollTopVal}}">
+                <block wx:for="{{items}}" wx:key="index">
+                    <view class="item">
+                        <view class="age">
+                            {{ item.age }}岁：
+                        </view>
+                        <view class="ageTxt">
+                            <block wx:for="{{item.content}}" wx:for-item="itemContent" wx:key="index">
+                                <view wx:if="{{itemContent.type == 'TLT'}}">
+                                    <view span="12">
+                                        <view>天赋【{{itemContent.name}}】发动：{{itemContent.description}}</view>
+                                    </view>
+                                </view>
+                                <view wx:if="{{itemContent.type == 'EVT'}}">
+                                    <view span="12">
+                                        <view>
+                                            {{itemContent.description}} \r\n{{itemContent.postEvent}}</view>
+                                    </view>
+                                </view>
+                            </block>
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+    <view wx:if="{{isEnd}}" type="light" class="zjBtn" bindtap="toSummary">
+        人生总结
+    </view>
+</view>
